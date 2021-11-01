@@ -69,3 +69,10 @@ function start() {
  if (this.y < 0) this.y = 0;
  if (this.y > h - ih) this.y = h - ih;
  };
+
+this.move = function(xDir, yDir) {
+ this.fitBounds(); //we add this instruction to keep bear within board
+ this.x += this.dBear * xDir;
+ this.y += this.dBear * yDir;
+ this.display();
+ };
