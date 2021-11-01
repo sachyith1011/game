@@ -145,5 +145,5 @@ function createBeeImg(wNum) {
  img.style.top = (y) + "px";
  //return the img object
  return img;
-
+}
 
