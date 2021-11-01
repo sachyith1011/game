@@ -48,3 +48,24 @@ function moveBear(e) {
  bear.move(0, 1)
  } // down key
 }
+
+function start() {
+ //create bear
+ bear = new Bear()
+ // Add an event listener to the keypress event.
+ document.addEventListener("keydown", moveBear, false);
+}
+
+ this.fitBounds = function() {
+ let parent = this.htmlElement.parentElement;
+ let iw = this.htmlElement.offsetWidth;
+ let ih = this.htmlElement.offsetHeight;
+ let l = parent.offsetLeft;
+ let t = parent.offsetTop;
+ let w = parent.offsetWidth;
+ let h = parent.offsetHeight;
+ if (this.x < 0) this.x = 0;
+ if (this.x > w - iw) this.x = w - iw;
+ if (this.y < 0) this.y = 0;
+ if (this.y > h - ih) this.y = h - ih;
+ };
