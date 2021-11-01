@@ -197,3 +197,11 @@ function updateBees() { // update loop for game
  updateTimer = setTimeout('updateBees()', period);
 }
 
+function isHit(defender, offender) {
+ if (overlap(defender, offender)) { //check if the two image overlap
+ let score = hits.innerHTML;
+ score = Number(score) + 1; //increment the score
+ hits.innerHTML = score; //display the new score
+ }
+}
+
