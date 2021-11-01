@@ -188,3 +188,12 @@ function moveBees() {
  }
 }
 
+function updateBees() { // update loop for game
+ //move the bees randomly
+ moveBees();
+ //use a fixed update period
+ let period = 10;//modify this to control refresh period
+ //update the timer for the next move
+ updateTimer = setTimeout('updateBees()', period);
+}
+
